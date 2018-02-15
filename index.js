@@ -40,13 +40,12 @@ function total() {
 function removeFromCart(item) {
     for(let i = 0; i < cart.length; i++){
       if(cart[i].hasOwnProperty(item)){
-        cart.splice(i, i + 1)
+        cart.splice(i, i + 1);
       } else {
-        return ""
+        return "That item is not in your cart.";
       }
   }
-
-  
+  return cart;
 }
 
 function placeOrder(cardNumber) {
